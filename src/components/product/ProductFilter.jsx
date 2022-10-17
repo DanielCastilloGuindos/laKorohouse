@@ -2,8 +2,7 @@ import React from 'react'
 
 export const ProductFilter = () => {
 	return (
-		<section
-			className='float-left w-80 py-10 min-h-full border-r border-gray-300'>
+		<>
 
 			<div className=' px-11 '>
 				<h3 
@@ -21,18 +20,18 @@ export const ProductFilter = () => {
 				<ul className='leading-10 text-gray-400'>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="laminas" id="laminas"/>
-						<label htmlFor='laminas' className='pl-4 leading-6'>Laminas</label>
+						<input type="checkbox" name="laminas" id="laminas" className='peer'/>
+						<label htmlFor='laminas' className='pl-4 leading-6 peer-checked:text-koro-600'>Laminas</label>
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="pines" id="pines" />
-						<label htmlFor='pines' className='pl-4 leading-6'>pines</label>
+						<input type="checkbox" name="pines" id="pines" className='peer'/>
+						<label htmlFor='pines' className='pl-4 leading-6 peer-checked:text-koro-600'>pines</label>
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="Chapas" id="Chapas" />
-						<label htmlFor='Chapas' className='pl-4 leading-6'>chapas</label>
+						<input type="checkbox" name="Chapas" id="Chapas" className='peer'/>
+						<label htmlFor='Chapas' className='pl-4 leading-6 peer-checked:text-koro-600'>chapas</label>
 					</li>
 				</ul>
 			</div>
@@ -45,23 +44,23 @@ export const ProductFilter = () => {
 				<ul className='leading-10 text-gray-400'>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="fiveOrLess" id="fiveOrLess"/>
-						<label htmlFor='fiveOrLess' className='pl-4 leading-6'>Menos de 5 €</label>
+						<input type="checkbox" name="fiveOrLess" id="fiveOrLess" className='peer'/>
+						<label htmlFor='fiveOrLess' className='pl-4 leading-6 peer-checked:text-koro-600'>Menos de 5 €</label>
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="fiveteenOrLess" id="fiveteenOrLess"/>
-						<label htmlFor='fiveteenOrLess' className='pl-4 leading-6'>Menos de 15 €</label>
+						<input type="checkbox" name="fiveteenOrLess" id="fiveteenOrLess" className='peer'/>
+						<label htmlFor='fiveteenOrLess' className='pl-4 leading-6 peer-checked:text-koro-600'>Menos de 15 €</label>
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="twentyOrLess" id="twentyOrLess"/>
-						<label htmlFor='twentyOrLess' className='pl-4 leading-6'>Menos de 20 €</label>
+						<input type="checkbox" name="twentyOrLess" id="twentyOrLess" className='peer'/>
+						<label htmlFor='twentyOrLess' className='pl-4 leading-6 peer-checked:text-koro-600'>Menos de 20 €</label>
 					</li>
 					<li
 					className='list-none font-normal'>
 						<input type="checkbox" name="custom" id="custom"/>
-						<label htmlFor='custom' className='pl-4 leading-6'>Personalizado</label>
+						<label htmlFor='custom'  className='peer'className='pl-4 leading-6 peer-checked:text-koro-600'>Personalizado</label>
 					</li>
 				</ul>
 			</div>
@@ -75,22 +74,22 @@ export const ProductFilter = () => {
 				<ul className='leading-10 text-gray-400'>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="naruto" id="naruto"/>
-						<label htmlFor='naruto' className='pl-4 leading-6'>Naruto</label>
+						<input type="checkbox" name="naruto" id="naruto" className='peer'/>
+						<label htmlFor='naruto' className='pl-4 leading-6 peer-checked:text-koro-600'>Naruto</label>
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="onePice" id="onePice" />
-						<label htmlFor='onePice' className='pl-4 leading-6'>One Piece</label>
+						<input type="checkbox" name="onePice" id="onePice"  className='peer'/>
+						<label htmlFor='onePice' className='pl-4 leading-6 peer-checked:text-koro-600'>One Piece</label>
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="dragonBall" id="dragonBall" />
-						<label htmlFor='dragonBall' className='pl-4 leading-6'>Dragon Ball</label>
+						<input type="checkbox" name="dragonBall" id="dragonBall"  className='peer'/>
+						<label htmlFor='dragonBall' className='pl-4 leading-6 peer-checked:text-koro-600'>Dragon Ball</label>
 					</li>
 				</ul>
 			</div>
 
-		</section>
+		</>
 	)
 }

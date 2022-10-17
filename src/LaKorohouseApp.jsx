@@ -1,21 +1,14 @@
 import { Header } from './templates/Header'
 import { Footer } from './templates/Footer'
 
-import { getProducts } from './helpers/getProducts'
-
 import { AppRouter } from './router/AppRouter'
 
 function App() {
-  let products = getProducts();
 
   return (
-    <div className="App bg-gray-50">
+    <div className="App text-white bg-[url('/background.jpg')] bg-fixed flex flex-col min-h-screen justify-start">
       <Header />
-
-      <main className=''>
-        <AppRouter />
-      </main>
-
+      <AppRouter />
       <Footer />
     </div>
   );

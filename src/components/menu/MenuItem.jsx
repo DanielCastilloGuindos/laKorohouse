@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const MenuItem = ({ title, data }) => {
 	let { path, navs, rel } = data;
@@ -7,14 +7,13 @@ export const MenuItem = ({ title, data }) => {
 	let subnavKeys = navs && Object.keys(navs);
 
 	return (
-		<span className=" relative uppercase">
-			{/* <Link */}
-			<a
+		<span className="relative uppercase">
+			<Link
 			href={ path || 'javascript:void()' }
-			to={ path }
+			to={ path || 'javascript:void()' }
 			rel={ rel ? rel : 'nofollow' }
 			title={ title }
-			className='block py-3 px-3.5 font-semibold no-underliner hover:bg-white peer'
+			className='block py-3 px-3.5 font-semibold no-underliner duration-500 hover:bg-koro-700 peer'
 			>
 				{ title } { navs && ( 
 					<svg
@@ -30,13 +29,16 @@ export const MenuItem = ({ title, data }) => {
 						d="M19 9l-7 7-7-7"></path>
 					</svg>
 				)}
-			</a>
-			{/* </Link> */}
+			</Link>
 
 			{ navs && (
-			<ul className="flex flex-col absolute left-0 px-4 py-5 w-64 bg-white normal-case opacity-0 -rotate-x-90 origin-top-right border shadow-lg overflow-hidden ease-linear duration-200 hover:opacity-100 hover:rotate-0 hover:overflow-auto -z-10 peer-hover:opacity-100 peer-hover:rotate-0 peer-hover:overflow-auto peer-hover:z-10 hover:z-10">
+			<ul className="flex flex-col absolute left-0 px-4 py-5 w-64 bg-koro-900 normal-case opacity-0 -rotate-x-90 origin-top-right border border-koro-100 shadow-lg overflow-hidden ease-linear duration-200 hover:opacity-100 hover:rotate-0 hover:overflow-auto -z-10 peer-hover:opacity-100 peer-hover:rotate-0 peer-hover:overflow-auto peer-hover:z-10 hover:z-10">
 				{ subnavKeys.map((key, index) => (
-					<a key={ index } href={ path } className="py-2.5 border-b ease-linear duration-300 last:border-b-0 hover:text-red-500 cursor-pointer">{ key }</a>
+					<Link
+						key={ index }
+						to={ navs[key].path || 'javascript:void()' }
+						rel={ rel ? rel : 'nofollow' }
+						className="py-2.5 border-b border-koro-100 ease-linear duration-300 last:border-b-0 hover:text-red-500 cursor-pointer">{ key }</Link>
 				) ) }
 			</ul>
 			)}

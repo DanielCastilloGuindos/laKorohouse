@@ -7,12 +7,12 @@ export const Header = () => {
 	let menu = getMenus();
 
 	return (
-		<header className="flex gap-4 justify-end items-center h-12 px-8 border-b border-gray-300 shadow">
+		<header className="flex gap-4 justify-end items-center h-12 px-8 border-b border-koro-100 shadow bg-koro-900">
 
 			{/* Title & Logo */}
 			<h1 className="mr-auto ml-0">
 				<Link to='/'>
-					<img className="h-12" src="https://e7.pngegg.com/pngimages/906/122/png-clipart-pokemon-logo-pokemon-logo-thumbnail.png" alt="La Korohouse - logo" />
+					<img className="h-12" src="logo/logo.png" alt="La Korohouse - logo" />
 				</Link>
 			</h1>
 

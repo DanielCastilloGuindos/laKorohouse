@@ -13,7 +13,7 @@ export const ProductCard = ( { product, } ) => {
 				src={ product.images[0] } />
 					
 			<figcaption
-				className="absolute left-0 w-full h-1/2 bottom-0 bg-indigo-900/30 leading-10 [backdrop-filter:blur(5px)]">
+				className="absolute left-0 w-full h-1/2 bottom-0 bg-koro-900/50 leading-10 [backdrop-filter:blur(5px)]">
 
 				<article className='py-2 px-6'>
 					{/* Title product */}
@@ -34,7 +34,7 @@ export const ProductCard = ( { product, } ) => {
 			{/* Action cart */}
 			<i
 				title='Add to cart'
-				className="absolute right-1 top-1 hidden h-12 w-12 transform items-center justify-center border border-gray-900 bg-indigo-700/20 border-none duration-500 hover:bg-blue-700 group-hover:flex [backdrop-filter:blur(5px)]">
+				className="absolute right-1 top-1 hidden h-12 w-12 transform items-center justify-center border border-gray-900 bg-indigo-700/20 border-none duration-500 hover:bg-koro-700 group-hover:flex [backdrop-filter:blur(5px)]">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					className="w-6"
