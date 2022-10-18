@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,7 +18,11 @@ module.exports = {
           700: 'rgb(38,9,122)',
           800: 'rgb(24,9,92)',
           900: 'rgb(28,10,64)',
-        },},
+        },
+      },
+      fontFamily: {
+        'ubuntu': ['Ubuntu', ...defaultTheme.fontFamily.serif],
+      },
     },
   },
   plugins: [],

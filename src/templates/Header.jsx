@@ -7,19 +7,21 @@ export const Header = () => {
 	let menu = getMenus();
 
 	return (
-		<header className="flex gap-4 justify-end items-center h-12 px-8 border-b border-koro-100 shadow bg-koro-900">
+		<header className="flex gap-4 justify-center md:justify-start items-center h-16 px-8 border-b border-koro-100 shadow bg-koro-900">
 
 			{/* Title & Logo */}
-			<h1 className="mr-auto ml-0">
-				<Link to='/'>
-					<img className="h-12" src="logo/logo.png" alt="La Korohouse - logo" />
+			<h1 className="h-full">
+				<Link to='/' className='h-full'>
+					<img className="h-full" src="logo/logo.png" alt="La Korohouse - logo" />
 				</Link>
 			</h1>
 
 			{/* Links */}
-      <Menu navs={menu} />
+			<section className='flex items-center ml-auto mr-0 h-full'>
+	      <Menu navs={menu} />
+			</section>
 
-			<section className="flex gap-3">
+			<section className="mr-0 flex gap-3">
 				{/* { Search } */}
 
 				{/* { Fav } */}

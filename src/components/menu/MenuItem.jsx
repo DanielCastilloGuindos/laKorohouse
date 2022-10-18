@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-export const MenuItem = ({ title, data }) => {
+export const MenuItem = ({ title, data, onClick }) => {
 	let { path, navs, rel } = data;
 
 	let subnavKeys = navs && Object.keys(navs);
@@ -13,7 +13,8 @@ export const MenuItem = ({ title, data }) => {
 			to={ path || 'javascript:void()' }
 			rel={ rel ? rel : 'nofollow' }
 			title={ title }
-			className='block py-3 px-3.5 font-semibold no-underliner duration-500 hover:bg-koro-700 peer'
+			className='block py-5 px-3.5 font-semibold text-2xl md:text-base no-underliner duration-500 hover:bg-koro-700 peer'
+			onClick={ onClick }
 			>
 				{ title } { navs && ( 
 					<svg
@@ -21,7 +22,7 @@ export const MenuItem = ({ title, data }) => {
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
-					className="stroke-current inline-block w-4 h-4 transform transition duration-150">
+					className="stroke-current hidden md:inline-block w-4 h-4 transform transition duration-150">
 						<path
 						strokeLinecap="round"
 						strokeLinejoin="round"
@@ -38,7 +39,8 @@ export const MenuItem = ({ title, data }) => {
 						key={ index }
 						to={ navs[key].path || 'javascript:void()' }
 						rel={ rel ? rel : 'nofollow' }
-						className="py-2.5 border-b border-koro-100 ease-linear duration-300 last:border-b-0 hover:text-red-500 cursor-pointer">{ key }</Link>
+						className="py-2.5 border-b border-koro-100 ease-linear duration-300 last:border-b-0 hover:text-red-500 cursor-pointer"
+						onClick={ onClick }>{ key }</Link>
 				) ) }
 			</ul>
 			)}

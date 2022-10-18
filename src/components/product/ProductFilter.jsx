@@ -59,8 +59,8 @@ export const ProductFilter = () => {
 					</li>
 					<li
 					className='list-none font-normal'>
-						<input type="checkbox" name="custom" id="custom"/>
-						<label htmlFor='custom'  className='peer'className='pl-4 leading-6 peer-checked:text-koro-600'>Personalizado</label>
+						<input type="checkbox" name="custom" id="custom" className='peer'/>
+						<label htmlFor='custom' className='pl-4 leading-6 peer-checked:text-koro-600'>Personalizado</label>
 					</li>
 				</ul>
 			</div>
