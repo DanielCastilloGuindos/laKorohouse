@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ProductFilter = () => {
 	return (
-		<>
+		<aside className='py-10'>
 
 			<div className=' px-11 '>
 				<h3 
@@ -90,6 +90,6 @@ export const ProductFilter = () => {
 				</ul>
 			</div>
 
-		</>
+		</aside>
 	)
 }

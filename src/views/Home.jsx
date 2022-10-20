@@ -36,10 +36,10 @@ export const Home = () => {
 					loop={true}
 						>
 						<SwiperSlide className='h-full flex '>
-							<div className='mt-auto h-1/2 mb-0 w-full flex flex-col gap-4 justify-start items-center text-center bg-gradient-to-t from-black/30'>
+							<div className='mt-auto px-6 pb-10 md:p-0 md:h-1/2 mb-0 w-full flex flex-col gap-4 justify-start items-center text-center bg-gradient-to-t from-koro-900/30'>
 								<h3 className='font-bold text-5xl [text-shadow:0em 0.1em 0.1em rgba(0,0,0,0.4)]'>We build anything</h3>
 								<p className='w-3/4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, recusandae voluptas inventore accusamus laudantium tempora temporibus maiores id veniam atque!</p>
-								<Link to="#" className='border-4 text-white bg-black/75 [backdrop-filter:blur(5px)] border-white text-xl px-4 py-3 rounded shadow-lg hover:shadow-none duration-300'>Learn more!</Link>
+								<Link to="#" className='border-4 text-white bg-koro-900/75 [backdrop-filter:blur(5px)] border-white text-xl px-4 py-3 rounded shadow-lg hover:shadow-none duration-300'>Learn more!</Link>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide className='h-full flex '>
@@ -56,13 +56,13 @@ export const Home = () => {
 				</section>
 
 				{/* Our Products more news */}
-				<section className='py-6 flex flex-col justify-center items-center  bg-indigo-100'>
+				<section className='py-6 flex flex-col justify-center items-center  bg-koro-800/80 [backdrop-filter:blur(5px)]'>
 
 					<header className='flex justify-center'>
-						<h2 className='text-5xl text-koro-800 font-extrabold uppercase'>Our products and news</h2>
+						<h2 className='text-5xl text-center text-indigo-100 font-extrabold uppercase'>Our products and news</h2>
 					</header>
 					
-					<div className='py-10 pl-8 flex flex-wrap justify-center items-center gap-6 h-full'>
+					<div className='py-10 md:pl-8 flex flex-wrap justify-center items-center gap-6 h-full'>
 						<ProductWrapper products={[products[0], products[1], products[3]]} />
 					</div>
 				</section>

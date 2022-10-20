@@ -1,28 +1,51 @@
 import React from 'react'
 
+import TalkSvg from '../assets/icons/talk.svg'
+
 export const Contact = () => {
 	return (
 		<main 
 		className='flex flex-col justify-center items-center'>
-			<article className='container md:max-w-6xl bg-white text-white'>
-				<section className='h-96'>
-
-					<header className='flex justify-center'>
-						<h2 className='text-5xl text-koro-600 font-extrabold uppercase'>Contact with us!</h2>
+			<article className=" px-8 py-12">
+				<section
+					className="max-w-screen-xl mt-24 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-koro-100/30 [backdrop-filter:blur(5px)] text-gray-100 rounded-lg shadow-lg">
+					<header className="flex flex-col justify-between">
+						<div>
+							<h2 className="text-4xl lg:text-5xl font-bold leading-tight">¡Hablamos de lo que quieras!</h2>
+							<div className="mt-8">
+								¿Odias los formularios? Mandanos un <span className="underline">correo</span>.
+							</div>
+						</div>
+						<div className="mt-8 text-center">
+							<img src={ TalkSvg } alt="" />
+						</div>
 					</header>
 
-					<form>
-						<div className="relative text-indigo-900">
+					<form >
+						<div>
+							<label className="uppercase text-sm font-bold">Nombre</label>
 							<input
-							type="text"
-							placeholder=' '
-							id="name"
-							className="peer py-1 px-4 bg-transparent bg-no-repeat border border-red-50  outline-none transition-all duration-500 [background-image:linear-gradient(-45deg,rgb(105,113,189),rgb(105,113,189)),linear-gradient(-45deg,rgba(185,185,185,.467),rgba(185,185,185,0.467))] [background-position:50% 99%,50% 99%] [background-size:0% 0.1rem, 100% 0.1rem] focus:[background-size:100% .1rem,100% .1rem]" />
-
-							<label htmlFor="name" className="absolute top-0 left-0 text-sm transition-all duration-500 cursor-text [transform:translateY(-50%)] peer-focus:top-0 peer-focus:text-sm peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base ">Hey, what's your name?</label>
+								type="text"
+								className="bg-gray-100 placeholder:italic text-koro-900 outline-none w-full text-sm mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+								placeholder="" />
+						</div>
+						<div className="mt-8">
+							<span className="uppercase text-sm font-bold">Email</span>
+							<input className="bg-gray-100 placeholder:italic text-koro-900 outline-none w-full text-sm mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+								type="text" />
+						</div>
+						<div className="mt-8">
+							<span className="uppercase text-sm font-bold">Mensaje</span>
+							<textarea
+								className="bg-gray-100 placeholder:italic text-koro-900 outline-none w-full h-32 text-sm mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+						</div>
+						<div className="mt-8">
+							<button
+								className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
+								Send Message
+							</button>
 						</div>
 					</form>
-
 				</section>
 			</article>
 		</main>

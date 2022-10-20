@@ -60,7 +60,7 @@ export const Footer = () => {
 				</nav>
 			</section>
 
-			<section className="w-full mt-12 py-6 border-t border-koro-100 flex pb-5 px-3 m-auto pt-5 text-gray-400 text-sm flex-col md:flex-row justify-start items-start max-w-6xl">
+			<section className="w-full mt-12 py-6 border-t border-koro-100 flex text-gray-400 text-sm flex-col md:flex-row justify-start items-start">
 
 				<div class="mt-2">
 					<p>&copy; Copyright { currYear } | La KoroHouse</p>

@@ -9,18 +9,18 @@ export const Shop = () => {
   return (
     <>
       <main
-      className=' grid grid-flow-col'
+      className='grid grid-flow-row md:grid-flow-col'
         >
     
         {/* Slide bar */}
         <section
-        className='w-80 py-10 bg-indigo-50 text-koro-900 min-h-full border-r border-gray-300'>
+        className='w-full md:w-80 bg-koro-100/30 [backdrop-filter:blur(5px)] text-indigo-100 md:min-h-full border-r border-koro-100'>
           <ProductFilter />
         </section>
 
 
         {/* Products viewer */}
-        <section className='py-10 pl-8 flex flex-wrap justify-start items-start gap-6'>
+        <section className='py-10 md:pl-8 flex flex-wrap justify-center md:justify-start items-start gap-6'>
           <ProductWrapper products={products} />
         </section>
       </main>

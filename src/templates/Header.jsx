@@ -15,8 +15,8 @@ export const Header = () => {
 
 			{/* Title & Logo */}
 			<h1 className="h-full">
-				<Link to='/' className='h-full'>
-					<img className="h-full" src={ Logo } alt="La Korohouse - logo" />
+				<Link to='/' className=''>
+					<img className="h-full" src={ Logo } alt="La KoroHouse - logo" />
 				</Link>
 			</h1>
 
