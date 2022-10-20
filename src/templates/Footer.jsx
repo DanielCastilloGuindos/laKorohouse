@@ -1,62 +1,72 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
+
+import { getFooterNavs } from '../helpers/getConfig'
+
 export const Footer = () => {
+	let currYear = 2022;
+	let { primarylinks, socialLinks } = getFooterNavs();
+
+	let keysPrimaryLinks = Object.keys(primarylinks);
+	let keysSocialLinks = Object.keys(socialLinks);
+
 	return (
 		<footer className='bg-koro-900 mt-auto mb-0 py-8 sm:py-12 px-12'>
 
-			<section className='container grid grid-cols-4'>
-				<div>
-					<h4 className='text-xl font-bold mb-6'>Productos</h4>
-					<ul className='list-none leading-10'>
-						<li>
-							<Link to="" className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>Laminas</Link>
-						</li>
-						<li>
-							<Link to="" className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>Chapas</Link>
-						</li>
-						<li>
-							<Link to="" className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>Pines</Link>
-						</li>
-					</ul>
-				</div>
+			<section className='container grid grid-col-1 md:grid-cols-4 gap-y-6'>
 
-				<div>
-					<h4 className='text-xl font-bold mb-6'>Util links</h4>
-					<ul className='list-none leading-10'>
-						<li>
-							<Link to="" className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>Laminas</Link>
-						</li>
-						<li>
-							<Link to="" className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>Chapas</Link>
-						</li>
-						<li>
-							<Link to="" className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>Pines</Link>
-						</li>
-					</ul>
-				</div>
+				{
+					keysPrimaryLinks.map((key, index) => {
+						let navs = primarylinks[key].navs;
+						let keysNavs = Object.keys(navs);
+
+						return (
+							<div>
+								<h4 className='text-xl font-bold mb-6'>{ key }</h4>
+								<ul className='list-none leading-10'>
+
+									{
+										keysNavs.map((keyN, index) => (
+											<li>
+												<Link to={ navs[keyN].path } className='border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800'>{ keyN }</Link>
+											</li>
+										))
+									}
+								</ul>
+							</div>
+						);
+					})
+				}
 
 			</section>
 
 			<section className='container mt-12'>
 				<h4 className='text-xl font-bold mb-6 hidden'>Redes</h4>
 				<nav className='flex gap-6'>
-					<Link to="">
-						<img src="svg/socialMedia/tiktok.svg" alt="" className='inline w-10' />
-					</Link>
-					<Link to="">
-						<img src="svg/socialMedia/instagram.svg" alt="" className='inline w-10' />
-					</Link>
-					<Link to="">
-						<img src="svg/socialMedia/twitter.svg" alt="" className='inline w-10' />
-					</Link>
-					<Link to="">
-						<img src="svg/socialMedia/twitch.svg" alt="" className='inline w-10' />
-					</Link>
+
+					{
+						keysSocialLinks.map((key, index) => {
+							let { path, icon } = socialLinks[key];
+
+							return (
+								<Link to={ path } >
+									<img src={ icon } alt={ key } className='inline w-10'/>
+								</Link>
+							);
+						})
+					}
+
 				</nav>
 			</section>
 
-			<section className='w-full container mt-12 border-t border-gray-400'>
+			<section className="w-full mt-12 py-6 border-t border-koro-100 flex pb-5 px-3 m-auto pt-5 text-gray-400 text-sm flex-col md:flex-row justify-start items-start max-w-6xl">
+
+				<div class="mt-2">
+					<p>&copy; Copyright { currYear } | La KoroHouse</p>
+					<p>All Rights Reserved.</p>
+				</div>
+
 			</section>
 
 		</footer>

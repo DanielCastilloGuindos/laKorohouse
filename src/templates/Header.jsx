@@ -1,10 +1,14 @@
 import React from 'react'
 import { Menu } from '../components/menu/Menu'
-import { getMenus } from "../helpers/getMenu"
 import { Link } from "react-router-dom";
 
+import Logo from '../assets/media/logo.png'
+import Cart from '../assets/icons/cart.svg'
+
+import { getHeaderNavs } from "../helpers/getConfig"
+
 export const Header = () => {
-	let menu = getMenus();
+	let headerInfo = getHeaderNavs();
 
 	return (
 		<header className="flex gap-4 justify-center md:justify-start items-center h-16 px-8 border-b border-koro-100 shadow bg-koro-900">
@@ -12,13 +16,13 @@ export const Header = () => {
 			{/* Title & Logo */}
 			<h1 className="h-full">
 				<Link to='/' className='h-full'>
-					<img className="h-full" src="logo/logo.png" alt="La Korohouse - logo" />
+					<img className="h-full" src={ Logo } alt="La Korohouse - logo" />
 				</Link>
 			</h1>
 
 			{/* Links */}
 			<section className='flex items-center ml-auto mr-0 h-full'>
-	      <Menu navs={menu} />
+	      <Menu navs={ headerInfo } />
 			</section>
 
 			<section className="mr-0 flex gap-3">
@@ -29,15 +33,12 @@ export const Header = () => {
 				{/* { Account } */}
 
 				{/* Carrito */}
-				<button className="relative block w-5 h-5 fill-current group">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						className="group-hover:animate-bounce"
-						viewBox="0 0 24 24"
-						aria-hidden="true"
-						focusable="false">
-						<path d="M9 22a2 2 0 100-4 2 2 0 000 4zm7 0a2 2 0 100-4 2 2 0 000 4zm5-17H5.665l-.687-3.21A1 1 0 004 1H1a1 1 0 000 2h2.191l2.831 13.21a.962.962 0 00.064.159c.017.053.038.105.063.155a.979.979 0 00.133.153.926.926 0 00.088.1c.058.041.12.077.185.105.034.022.07.042.107.06A.993.993 0 007 17h11a1 1 0 00.958-.713l3-10A1.001 1.001 0 0021 5zm-2.244 5H16V7h3.656l-.9 3zM7.819 15l-.6-3H9v3H7.819zM11 12h3v3h-3v-3zm0-2V7h3v3h-3zM9 7v3H6.82l-.6-3H9zm8.256 8H16v-3h2.156l-.9 3z"></path>
-					</svg>
+				<button className="relative flex items-center w-5 h-5 fill-current group">
+					{/*  */}
+					<img
+						alt="" 
+						className="h-10 group-hover:animate-bounce"
+						src={ Cart } />
 
 					<span className="absolute flex justify-center items-center -top-1/2 -right-1/2 w-4 min-w-fit h-4 rounded-full text-white bg-red-700 text-[10px]">
 						{ 0 }
